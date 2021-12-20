@@ -7,8 +7,8 @@ class SearchBar extends React.Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
-    // a function passed in as a prop by App
-    //xyz(this.state.term);
+    // test to see if 'props' was neccesary
+    this.props.onTermSubmit(this.state.term);
   };
 
   render() {
