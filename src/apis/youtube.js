@@ -10,3 +10,8 @@ export default axios.create({
     key: KEY,
   },
 });
+
+// youtube is now a pre-configured instance in Axios
+// it can be called like so: youtube.xyz()/ youtube()
+// with the ext. '.get'
+// inside of get is the path you want to make a request to
