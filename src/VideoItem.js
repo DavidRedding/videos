@@ -5,7 +5,7 @@ const VideoItem = (props) => {
   return (
     <div
       // MUST BE => ()
-      onClick={() => props.onVideoSelect(props.video.snippet.channelTitle)}
+      onClick={() => props.onVideoSelect(props.video)}
       className="video-item item "
     >
       <img
