@@ -1,0 +1,12 @@
+.video-item {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+/* We added more specifity to add importance,
+it will get overidden by semantic ui w/o */
+
+.video-item.item img {
+  max-width: 180px;
+}
