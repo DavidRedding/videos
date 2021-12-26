@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
             <label>Video Search </label>
             <input
               type="text"
-              placeholder='Try "charlie bit my finger"'
+              placeholder={`Try "where's the chapstick"`}
               value={this.state.term}
               onChange={(e) => this.setState({ term: e.target.value })}
             ></input>

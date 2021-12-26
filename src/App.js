@@ -10,6 +10,10 @@ class App extends React.Component {
     selectedVideo: null,
   };
 
+  componentDidMount() {
+    this.onTermSubmit(`Charlie bit my finger`);
+  }
+
   onTermSubmit = async (term) => {
     const response = await youtube.get("/search", { params: { q: term } });
     this.setState({
