@@ -5,16 +5,10 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  useEffect(() => onTermSubmit(`Charlie bit my finger`), []);
-
-  const onTermSubmit = async (term) => {
-    const response = await youtube.get("/search", { params: { q: term } });
-    setVideos(response.data.items);
-    setSelectedVideo(response.data.items[0]);
-  };
+  // Was inside of 'onTermSubmit', will deal with later
+  // setSelectedVideo(response.data.items[0]);
 
   return (
     <div className="ui container">
