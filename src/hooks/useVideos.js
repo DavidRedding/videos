@@ -9,7 +9,7 @@ I will return a list of videos & a way to search for videos(via function/method)
 const useVideos = (defaultSearchTerm) => {
   const [videos, setVideos] = useState([]);
 
-  useEffect(() => search(defaultSearchTerm), []);
+  useEffect(() => search(defaultSearchTerm), [defaultSearchTerm]);
 
   const search = async (term) => {
     const response = await youtube.get("/search", { params: { q: term } });
