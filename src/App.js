@@ -8,8 +8,8 @@ const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { videos, search } = useVideos(`charlie bit my finger`);
 
-  // Was inside of 'onTermSubmit', will deal with later
-  // setSelectedVideo(response.data.items[0]);
+  // When we get a new list of videos, select the first one
+  useEffect(() => setSelectedVideo(videos[0]), [videos]);
 
   return (
     <div className="ui container">
