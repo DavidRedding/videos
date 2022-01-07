@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import youtube from "./apis/youtube";
+import useVideos from "./hooks/useVideos";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const { videos, search } = useVideos(`charlie bit my finger`);
 
   // Was inside of 'onTermSubmit', will deal with later
   // setSelectedVideo(response.data.items[0]);
