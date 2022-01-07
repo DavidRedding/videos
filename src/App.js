@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import youtube from "./apis/youtube";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-class App extends React.Component {
-  state = {
-    videos: [],
-    selectedVideo: null,
-  };
+const App = () => {
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+};
 
+class App extends React.Component {
   componentDidMount() {
     this.onTermSubmit(`Charlie bit my finger`);
   }
